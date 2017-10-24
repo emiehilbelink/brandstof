@@ -1,0 +1,86 @@
+{% extends 'partials/_master.twig' %}
+
+{% block timer %}
+
+	<div class="homepage-firstblock">
+		<div class="homepage-timer">
+			<div class="timer">
+				<p id="demo"></p>
+				<script>
+					// Set the date we're counting down to
+					var countDownDate = new Date("Jan 5, 2018 15:37:25").getTime();
+					var text = "Brandstof award 2018";
+					document.getEleme
+					// Update the count down every 1 second
+					var x = setInterval(function() {
+
+					    // Get todays date and time
+					    var now = new Date().getTime();
+					    
+					    // Find the distance between now an the count down date
+					    var distance = countDownDate - now;
+					    
+					    // Time calculations for days, hours, minutes and seconds
+					    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+					    
+					    // Output the result in an element with id="demo"
+					
+					    document.getElementById("demo").innerHTML = " <h1> " + text + "</h1> "  + days + "d " + hours + "h "
+					    + minutes + "m " + seconds + "s ";
+					    
+					    // If the count down is over, write some text 
+					    if (distance < 0) {
+					        clearInterval(x);
+					        document.getElementById("demo").innerHTML = "IS AFGELOPEN";
+					    }
+					});
+				</script>
+
+			</div>
+		</div>
+	</div>
+{% endblock timer %}	
+
+{% block main %}
+
+	<div class="homepage-left">
+		<img src="files/food-fruit-orange-1286.jpg">
+	</div>
+
+	<div class="homepage-right">
+		<div class="homepage-text">
+	     {% if record is defined %}
+			 <h1>{{ record.title }}</h1>
+				{{ record.body }}
+		{% endif %}
+		</div>
+	</div>
+
+{% endblock main %}
+
+{% block trending %}
+	<div class="trending">
+		<h1>trending</h1>
+	</div>
+{% endblock trending %}
+
+{% block blogs %}
+	<div class="blogs">
+		<h1>Recente blogs</h1>
+		<div class="recent-blogs">
+			{% set blogs = "blogs/latest/3" %}
+				{% for blog in blogs %}
+					{% if content.image!="" %}
+           			 <img src="{{ blog.image|thumbnail(480, 480) }}">
+        			{% endif %}
+				{% endfor %}
+			
+			
+		</div>
+	</div>
+{% endblock blogs %}
+
+

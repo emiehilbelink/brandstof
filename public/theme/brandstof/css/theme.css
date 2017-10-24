@@ -1,0 +1,158 @@
+.headerphoto {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  min-height: 20vh;
+  max-height: 100vh; }
+
+.column, .columns {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; 
+  margin-left: 0% !important;
+  margin-right: 0% !important;
+  padding-left: 0% !important;
+  padding-right: 0% !important;
+}
+
+.headertitle {
+  text-align: center; }
+
+[type='search'] {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+ul.pagination {
+  background: #DDD;
+  display: inline-block; }
+  ul.pagination a {
+    padding: 0.6em 1em;
+    text-decoration: none; }
+  ul.pagination .active a {
+    color: #e6e6e6;
+    background: #0a0a0a; }
+
+h1 a, h2 a, h3 a {
+  text-decoration: none; 
+}
+
+p.meta {
+  font-size: 90%;
+  color: #666; 
+}
+
+.menu > li {
+  padding: 0; 
+}
+
+.menu > li a {
+    color: #1779ba;
+    text-decoration: none; }
+  .menu > li.active > a {
+    color: #1779ba;
+    background-color: inherit;
+    border-bottom: 1px solid; 
+}
+
+
+.widgetholder .widget {
+  margin: 1.5em 0; 
+}
+
+.menuLogIn{
+  font-size: 70%;
+  color: red !important;
+}
+
+.menuAanmelden {
+  font-size: 70%;
+  border-right: 1px solid red ; 
+  color: red !important;
+}
+
+.top-bar-left{
+  margin-left: 8%;
+}
+
+.top-bar-right{
+  margin-right: 8%;
+}
+
+.headertitle{
+  display: none;
+}
+
+
+.homepage-left{
+  width: 50%;
+  float:left;
+}
+
+.homepage-right{
+  width: 50%;
+  float: right;
+ 
+}
+
+.timer{
+  text-align: center;
+  background-color: lightgrey;
+}
+
+.timer p{
+  font-size: 400%;
+}
+
+#demo h1{
+  font-size: 50%;
+  margin-bottom: 0rem !important;
+}
+
+
+.homepage-left img{
+  width: 60%;
+  margin: auto;
+}
+
+.homepage-text{
+  width: 80%;
+  margin-left: 0%;
+}
+
+.trending{
+  height: 150px;
+  background-color: lightgray;
+}
+
+.trending h1{
+  text-align: center;
+ 
+}
+
+.blogs h1{
+  text-align: center;
+}
+
+@media print, screen and (min-width: 40em) {
+  h1, h2 {
+    margin-bottom: 2rem; }
+  img {
+    margin: 0 auto 1rem;
+    max-width: 80%;
+    display: block; } 
+  }
+
+@media screen and (max-width: 39.9375em) {
+  .no-js .top-bar {
+    display: none; 
+  } 
+  .timer p{
+  font-size: 200%;
+  }
+}
+
+
+@media print, screen and (min-width: 40em) {
+  .no-js .title-bar {
+    display: none; } 
+}

@@ -10,15 +10,15 @@ database:
     databasename: bolt
 
 # The name of the website
-sitename: A sample site
-payoff: The amazing payoff goes here
+sitename: 
+payoff: 
 
 # The theme to use. Be sure to copy the {theme_path}/base-2016 folder, and
 # change the name here accordingly.
 #
 # Don't edit the templates in theme/base-2016, because they _will_ get updated
 # in next releases
-theme: base-2016
+theme: brandstof
 
 # The locale that'll be used by the application. If no locale is set the
 # fallback locale is 'en_GB'. For available options, see:
@@ -81,7 +81,7 @@ cron_hour: 3
 #       the website, be sure to check for a theme.yml file in your theme's
 #       folder. If a template is set there, it will override the setting here.
 homepage: page/1
-homepage_template: index.twig
+homepage_template: frontpage.twig
 
 # The default content for the 404 page. Uses the 'record_template' template by
 # default.
@@ -449,11 +449,11 @@ hash_strength: 10
 #     password: pwd
 
 # Options for backend user interface
-# backend:
-#    news:
-#        disable: true     # Disable news panel. Defaults to false. "Alerts" will still be shown.
-#    stack:
-#        disable: true     # Disable stack usage. Defaults to false.
+backend:
+   news:
+       disable: true     # Disable news panel. Defaults to false. "Alerts" will still be shown.
+   stack:
+       disable: true     # Disable stack usage. Defaults to false.
 
 # Options that will be forced in next major version
 compatibility:

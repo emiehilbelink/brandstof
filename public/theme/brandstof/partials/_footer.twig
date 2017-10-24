@@ -1,0 +1,22 @@
+<!-- Footer -->
+<footer class="large-10">
+    <hr />
+    <div class="large-1 columns">
+        <p> Copyright 
+        </p>
+    </div>
+    <div class="large-5 columns">
+        {{ menu(
+            identifier = 'social',
+            template = 'partials/_sub_menu.twig',
+            params = {'withsubmenus': false, 'class': 'inline-list align-right'}
+        ) }}
+    </div>
+
+    {{ widgets('footer') }}
+
+</footer>
+
+<script src="{{ asset('js/jquery.min.js', 'theme') }}"></script>
+<script src="{{ asset('js/foundation.js', 'theme') }}"></script>
+<script src="{{ asset('js/app.js', 'theme') }}"></script>

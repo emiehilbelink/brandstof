@@ -37,7 +37,7 @@ pages:
     recordsperpage: 100
 
 
-# Entries can be used for things like 'news' or 'blogpostings'. They have a 'teaser',
+# blogs can be used for things like 'news' or 'blogpostings'. They have a 'teaser',
 # which can be used for a short blurb on listing-pages, allowing visitors to
 # click-through to the rest of the entry. It also has fields for an image and an
 # optional video.
@@ -45,12 +45,12 @@ pages:
 # from your news-item.
 # This ContentType defines 'categories' and 'tags' as taxonomies, allowing the
 # editor to use both to categorize a specific entry.
-# The 'sort' is set to '-datepublish', which means that newer entries will be
-# shown above older entries.
+# The 'sort' is set to '-datepublish', which means that newer blogs will be
+# shown above older blogs.
 
-entries:
-    name: Entries
-    singular_name: Entry
+blogs:
+    name: Blogs
+    singular_name: blog
     fields:
         title:
             type: text
@@ -89,7 +89,6 @@ entries:
 # copy some fields to your own ContentTypes.
 # Since no templates are defined for this ContentType, the default record_template,
 # listing_template, and related settings are used from config.yml
-
 showcases:
     name: Showcases
     slug: showcases
@@ -158,7 +157,7 @@ showcases:
             postfix: "Select your favourite turtle(s)."
         selectentry:
             type: select
-            values: entries/id,title
+            values: blogs/id,title
             postfix: "Select an entry"
             autocomplete: true
             sort: title
@@ -176,7 +175,7 @@ showcases:
                 repeatcontent:
                     type: html
     relations:
-        entries:
+        blogs:
             multiple: false
             label: "Choose an entry"
             order: -id
