@@ -18,7 +18,17 @@
 </div>
 
 {% if headerimage is defined and headerimage is not empty %}
-
-	<div class="large-12 columns headerphoto" style='background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0.5)), url({{ headerimage }})'>
+	{% setcontent header = 'page/1' %}
+	<div class="large-12 columns headerphoto" style='background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0.5)), url({{ headerimage }})'> 
+		<div class="logo-header">
+			<img src="files/brandstof.jpg">
+			<h4> Meld je nu aan of raak geinspireerd door <br/> andere inschrijven </h4>
+		</div>
+		<div class="button-header">
+			<button class="button-left"><span>Aanmelden </span></button>
+			<button class="button-right"><span>Bekijken </span></button>
+		</div>
+		
+	</div>
 {% endif %}
-</div>
+

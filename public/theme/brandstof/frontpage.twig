@@ -1,5 +1,6 @@
 {% extends 'partials/_master.twig' %}
 
+
 {% block timer %}
 
 	<div class="homepage-firstblock">
@@ -54,7 +55,7 @@
 		<div class="homepage-text">
 	     {% if record is defined %}
 			 <h1>{{ record.title }}</h1>
-				{{ record.body }}
+				 {{ record.body|length > 499 ? record.body|slice(0, 499) ~ ' Lees meer ->' : record.body  }}
 		{% endif %}
 		</div>
 	</div>
@@ -71,16 +72,31 @@
 	<div class="blogs">
 		<h1>Recente blogs</h1>
 		<div class="recent-blogs">
-			{% set blogs = "blogs/latest/3" %}
+			{% setcontent blogs = 'blogs/latest/3' %}
 				{% for blog in blogs %}
-					{% if content.image!="" %}
-           			 <img src="{{ blog.image|thumbnail(480, 480) }}">
-        			{% endif %}
-				{% endfor %}
-			
-			
+					<div class="blog-preview">
+							<div class="blog-img">
+			                       <img src="{{ blog.image|thumbnail(400, 400) }}">
+			                </div>
+			                
+			                    <div class="blog-title">
+			                    	<a href="{{ blog.link }}"><h4>{{ blog.title }}</h4> </a>
+			                    </div>
+			                    <div class="blog-body">
+			                    	<p> {{ blog.body|length > 50 ? blog.body|slice(0, 50) ~ ' ...' : blog.body  }} </p>
+			                    </div>
+
+			        </div>
+            	{% endfor %}
+
 		</div>
 	</div>
+
+	<div class="blog-button">
+		<div class="blog-seeAll"> <a href="/blogs"><span>Bekijk alle blogitems</span></a> </div>
+	</div>
+
+	
 {% endblock blogs %}
 
 

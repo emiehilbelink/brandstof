@@ -29,12 +29,17 @@
 
             {{ include('partials/_menubar.twig') }} 
             {{ include('partials/_header.twig') }} 
+               
+
+                 
+          
+
 
             {% if theme.layout.variant != 'wide' %}
                 </div>
             {% endif %}
 
-            <div class="large-12">
+            <div class="large-12 columns" style="padding-top: 0rem;">
                
                     {% if block("timer") is defined %}
                        {% block timer %}
