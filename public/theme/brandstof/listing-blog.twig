@@ -1,0 +1,29 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+
+        <div class="recent-blogs">
+            {% setcontent blogs = 'blogs' %}
+                {% for blog in blogs %}
+                    <div class="blog-preview">
+                            <div class="blog-img">
+                                   <img src="{{ blog.image|thumbnail(400, 300) }}">
+                            </div>
+                            
+                                <div class="blog-title">
+                                    <a href="{{ blog.link }}"><h4>{{ blog.title }}</h4> </a>
+                                </div>
+                                <div class="blog-body">
+
+                                    <p> {{ blog.body|length > 98 ? blog.body|slice(3, 98) ~ ' ...' : blog.body  }} </p>
+                                </div>
+
+                    </div>
+                {% endfor %}
+
+        </div>
+   
+
+        
+
+{% endblock main %}

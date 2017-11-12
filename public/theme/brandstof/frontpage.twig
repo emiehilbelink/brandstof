@@ -3,8 +3,6 @@
 
 {% block timer %}
 
-	<div class="homepage-firstblock">
-		<div class="homepage-timer">
 			<div class="timer">
 				<p id="demo"></p>
 				<script>
@@ -41,22 +39,26 @@
 				</script>
 
 			</div>
-		</div>
-	</div>
+		
+	
 {% endblock timer %}	
 
 {% block main %}
+	<div class="home-page-first-section">
+		<div class="homepage-left">
+			<img src="files/food-fruit-orange-1286.jpg">
+		</div>
 
-	<div class="homepage-left">
-		<img src="files/food-fruit-orange-1286.jpg">
-	</div>
-
-	<div class="homepage-right">
-		<div class="homepage-text">
-	     {% if record is defined %}
-			 <h1>{{ record.title }}</h1>
-				 {{ record.body|length > 499 ? record.body|slice(0, 499) ~ ' Lees meer ->' : record.body  }}
-		{% endif %}
+		<div class="homepage-right">
+			<div class="homepage-text">
+		     {% if record is defined %}
+				 <h1>{{ record.title }}</h1>
+					<p> {{ record.body|length > 199 ? record.body|slice(3, 199) : record.body  }} </p>
+			{% endif %}
+			</div>
+			<div class="read-more-button">
+				<a href="{{ record.link }}"><p>Lees meer &nbsp;></p> </a>
+			</div>
 		</div>
 	</div>
 
@@ -76,14 +78,15 @@
 				{% for blog in blogs %}
 					<div class="blog-preview">
 							<div class="blog-img">
-			                       <img src="{{ blog.image|thumbnail(400, 400) }}">
+			                       <img src="{{ blog.image|thumbnail(400, 300) }}">
 			                </div>
 			                
 			                    <div class="blog-title">
 			                    	<a href="{{ blog.link }}"><h4>{{ blog.title }}</h4> </a>
 			                    </div>
 			                    <div class="blog-body">
-			                    	<p> {{ blog.body|length > 50 ? blog.body|slice(0, 50) ~ ' ...' : blog.body  }} </p>
+
+			                    	<p> {{ blog.body|length > 98 ? blog.body|slice(3, 98) ~ ' ...' : blog.body  }} </p>
 			                    </div>
 
 			        </div>
@@ -93,10 +96,20 @@
 	</div>
 
 	<div class="blog-button">
-		<div class="blog-seeAll"> <a href="/blogs"><span>Bekijk alle blogitems</span></a> </div>
+		<div class="blog-seeAll"> <a href="/blogs"><p>Bekijk alle blogs &nbsp;></p></a> </div>
 	</div>
 
 	
 {% endblock blogs %}
 
+{% block sponsoren %}
+	<div class="sponsoren">
+		<h1> Sponsoren </h1>
+		<div class="text-sponsoren">
+			<h3> WIRELAB </h3>
+			<p> DIGITAL CREATIVE </p>
+		</div>
+	</div>
 
+
+{% endblock sponsoren %}

@@ -22,14 +22,28 @@ pages:
         slug:
             type: slug
             uses: title
-        image:
-            type: image
-        teaser:
-            type: html
-            height: 150px
         body:
             type: html
             height: 300px
+        teaser:
+            type: html
+            height: 150px
+        image:
+            type: image
+            group: header
+        header_img:
+            type: image
+            extensions: [ gif, jpg, png ]
+        header_title:
+            type: text
+        button1_text:
+            type: text
+        button1_link:
+            type: text
+        button2_text:
+            type: text
+        button2_link:
+            type: text
         template:
             type: templateselect
             filter: '*.twig'
@@ -77,7 +91,7 @@ blogs:
           label: Select a page
     taxonomy: [ categories, tags ]
     record_template: entry.twig
-    listing_template: listing.twig
+    listing_template: listing-blog.twig
     listing_records: 10
     default_status: published
     sort: -datepublish

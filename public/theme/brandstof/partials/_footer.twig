@@ -1,11 +1,7 @@
 <!-- Footer -->
-<footer class="large-10">
-    <hr />
-    <div class="large-1 columns">
-        <p> Copyright 
-        </p>
-    </div>
-    <div class="large-5 columns">
+<div class="footer">
+    Copyright
+    <div class="social-menu">
         {{ menu(
             identifier = 'social',
             template = 'partials/_sub_menu.twig',
@@ -13,9 +9,7 @@
         ) }}
     </div>
 
-    {{ widgets('footer') }}
-
-</footer>
+</div>
 
 <script src="{{ asset('js/jquery.min.js', 'theme') }}"></script>
 <script src="{{ asset('js/foundation.js', 'theme') }}"></script>

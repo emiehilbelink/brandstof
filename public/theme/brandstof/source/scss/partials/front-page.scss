@@ -1,0 +1,175 @@
+.timer{
+  text-align: center;
+  background-color: #C5B7A1;
+}
+
+.timer p{
+  font-size: 250%;
+  padding-top: 1%;
+}
+
+#demo h1{
+  font-size: 50%;
+  margin-bottom: -0.4rem !important;
+}
+
+.home-page-first-section{
+  width: 100%;
+}
+
+.homepage-left{
+  width: 50%;
+  float:left;
+  padding-bottom: 2.0em;
+  margin-top: 1.5em;
+}
+
+.homepage-left img{
+  width: 100%;
+  margin: auto;
+}
+
+.homepage-right{
+  width: 50%;
+  float: left;
+  margin-top: 1.5em;
+ }
+
+.homepage-text{
+  width: 95%;
+}
+
+.trending{
+  height: 400px;
+  background-color: #f5f1eb ;
+}
+
+.trending h1{
+  text-align: center;
+  color: #d7c7af;
+  padding-top: 3%;
+ }
+
+.blogs{
+  width: 100%;
+}
+
+
+.blogs h1{
+  text-align: center;
+  color: #d7c7af;
+  padding-top: 3%;
+}
+
+.blog-preview{
+  width: 30%;
+  float:left;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 550px;
+  margin-left: 2.5%;
+  margin-top: 5%;
+}
+
+.blog-img{
+  margin-top:9%;
+  text-align: center;
+}
+
+.blog-preview:hover{
+box-shadow: 2px 6px 10px 2px rgba(0, 0, 0, 0.2), 2px 8px 22px 2px rgba(0, 0, 0, 0.19);
+}
+
+.blog-img:hover img{
+   -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+     transform:scale(1.05);
+}
+
+.blog-title h4{
+  margin:0 auto 1rem;
+  max-width: 73%;
+  display: block;
+  font-size: 137.5%;
+}
+
+.blog-body p{
+  margin:0 auto 1rem;
+  max-width: 73%;
+  display: block;
+}
+
+.sponsoren{
+  height: 300px;
+  background-color: #f5f1eb ;
+}
+
+.sponsoren h1{
+  text-align: center;
+  color: #d7c7af;
+  padding-top: 3%;
+}
+
+.text-sponsoren h3 , p{
+  text-align: center;
+}
+
+
+@media screen and (max-width: 981px) {
+  .homepage-text h1{
+    font-size: 200%;
+  }
+}
+
+@media screen and (max-width: 801px) {
+  .homepage-left{
+    display: none;
+  }
+
+  .homepage-right{
+    width: 100%;
+  }
+
+  .homepage-text{
+    width: 80%;
+    margin-left:10%
+  }
+
+  .homepage-text h1{
+    text-align: center;
+  }
+
+  .blog-preview{
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+  }
+
+
+  .blog-img img{
+    width: 72%;
+  }
+
+}
+
+@media screen and (max-width: 361px) {
+  .blog-title h4{
+    font-size: 100%;
+    margin-top: 8%;
+  }
+
+  .blog-title p{
+    font-size: 80%;
+  }
+
+  .blog-preview{
+    height: 400px;
+  }
+
+  .sponsoren{
+    height:  200px;
+  }
+
+}

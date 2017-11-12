@@ -19,16 +19,31 @@
 
 {% if headerimage is defined and headerimage is not empty %}
 	{% setcontent header = 'page/1' %}
-	<div class="large-12 columns headerphoto" style='background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0.5)), url({{ headerimage }})'> 
-		<div class="logo-header">
-			<img src="files/brandstof.jpg">
-			<h4> Meld je nu aan of raak geinspireerd door <br/> andere inschrijven </h4>
-		</div>
-		<div class="button-header">
-			<button class="button-left"><span>Aanmelden </span></button>
-			<button class="button-right"><span>Bekijken </span></button>
-		</div>
+
+	{% if record.image is not empty %}
+		<div class="large-12 columns headerphoto" style='background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0.5)), url({{ headerimage }})'> 
+			<div class="logo-header">
+				{% if record.header_img is not empty %}
+					 <img src="{{ record.header_img|thumbnail(record.image, 400, 120)}}">
+				{% endif %}
+					{{ record.header_title }}
+			</div>
+
 		
-	</div>
+			<div class="button-header">
+				{% if record.button1_text is not empty and record.button1_link is not empty %}
+					<div class="button-left"> 
+						<a href="{{ record.button1_link }}"><span>{{ record.button1_text }} </span></a>
+					</div>
+				{% endif %}
+				{% if record.button2_text is not empty and record.button2_link is not empty %}
+					<div class="button-right">
+						<a href="{{ record.button2_link }}"><span>{{ record.button2_text }} </span></a>
+					</div>
+				{% endif %}
+			</div>
+			
+		</div>
+	{% endif %}
 {% endif %}
 
