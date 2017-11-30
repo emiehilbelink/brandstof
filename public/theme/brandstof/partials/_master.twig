@@ -31,6 +31,21 @@
             {{ include('partials/_menubar.twig') }} 
             {{ include('partials/_header.twig') }} 
                
+               
+                    {% if block("timer") is defined %}
+                       {% block timer %}
+                       {% endblock timer %}
+                    {% endif %}
+
+                    
+                       <div class="large-12 columns">
+                            {% if block("kosten") is defined %}
+                              {% block kosten %}
+                              {% endblock kosten %}
+                            {% endif %}
+                        </div>
+                
+
 
                  
           
@@ -40,14 +55,10 @@
                 </div>
             {% endif %}
 
-            <div class="large-12 columns" style="padding-top: 0rem;">
-               
-                    {% if block("timer") is defined %}
-                       {% block timer %}
-                       {% endblock timer %}
-                    {% endif %}
-            </div>
+           
+         
 
+            
             <div class="{% if theme.layout.aside not in ['left', 'right'] %}large-centered{% endif %} large-{{ main_width }} columns">
 
                      {% if theme.layout.aside == "left" %}
@@ -55,6 +66,9 @@
                      {% endif %}
 
                     {{ widgets('main_top') }}
+
+
+
                     {% block main %}
                     {% endblock main %}
 
@@ -74,6 +88,7 @@
                     {% endif %}
             </div>
 
+
               <div class="large-12 columns">
                  {% if block("blogs") is defined %}
                        {% block blogs %}
@@ -85,6 +100,13 @@
                  {% if block("sponsoren") is defined %}
                        {% block sponsoren %}
                        {% endblock sponsoren %}
+                    {% endif %}
+            </div>
+
+              <div class="large-12 columns">
+                 {% if block("mijnuploads") is defined %}
+                       {% block mijnuploads %}
+                       {% endblock mijnuploads %}
                     {% endif %}
             </div>
 

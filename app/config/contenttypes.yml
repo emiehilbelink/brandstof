@@ -25,6 +25,9 @@ pages:
         body:
             type: html
             height: 300px
+        img_body:
+            type: image
+            extensions: [ gif, jpg, png]    
         teaser:
             type: html
             height: 150px
@@ -49,6 +52,7 @@ pages:
             filter: '*.twig'
     taxonomy: [ groups ]
     recordsperpage: 100
+    
 
 
 # blogs can be used for things like 'news' or 'blogpostings'. They have a 'teaser',
@@ -90,13 +94,28 @@ blogs:
           order: title
           label: Select a page
     taxonomy: [ categories, tags ]
-    record_template: entry.twig
+    record_template: entry-blog.twig
     listing_template: listing-blog.twig
     listing_records: 10
     default_status: published
     sort: -datepublish
     recordsperpage: 10
 
+
+#mijn uploads
+
+mijnuploads:
+    name: Mijnuploads
+    slug: mijnuploads
+    singular_name: Mijnuploads
+    singular_slug: mijnuploads
+    fields:
+        image:
+            type: image
+            attrib: title # Note: retrieve this in your template with {{ record.values.image.title }}
+            extensions: [ gif, jpg, png ]
+        imagelist:
+            type: imagelist
 
 # The 'Showcases' is not particularly useful in most cases, but it does a good
 # job of showcasing most of the available fieldtypes. Feel free to delete it, or

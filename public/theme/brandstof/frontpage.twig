@@ -3,7 +3,7 @@
 
 {% block timer %}
 
-			<div class="timer">
+			<div class="timer clearfix">
 				<p id="demo"></p>
 				<script>
 					// Set the date we're counting down to
@@ -46,13 +46,13 @@
 {% block main %}
 	<div class="home-page-first-section">
 		<div class="homepage-left">
-			<img src="files/food-fruit-orange-1286.jpg">
+			<img src="files/plaatje.png">
 		</div>
 
 		<div class="homepage-right">
 			<div class="homepage-text">
 		     {% if record is defined %}
-				 <h1>{{ record.title }}</h1>
+				<h1><span class="underline-this">{{ record.title }}</span></h1>
 					<p> {{ record.body|length > 199 ? record.body|slice(3, 199) : record.body  }} </p>
 			{% endif %}
 			</div>
@@ -66,24 +66,33 @@
 
 {% block trending %}
 	<div class="trending">
-		<h1>trending</h1>
+			<h1><span class="underline-this"> Trending</span></h1>
 	</div>
 {% endblock trending %}
 
 {% block blogs %}
 	<div class="blogs">
-		<h1>Recente blogs</h1>
-		<div class="recent-blogs">
+		<h1><span class="underline-this"> Recente blogs</span></h1>
+		<div class="recent-blogs clearfix">
 			{% setcontent blogs = 'blogs/latest/3' %}
 				{% for blog in blogs %}
 					<div class="blog-preview">
 							<div class="blog-img">
 			                       <img src="{{ blog.image|thumbnail(400, 300) }}">
 			                </div>
-			                
-			                    <div class="blog-title">
+			               	
+			               	<div class="blog-title">
 			                    	<a href="{{ blog.link }}"><h4>{{ blog.title }}</h4> </a>
-			                    </div>
+			                </div>
+
+			                 <div class="taxonomy">
+				              	{% if blog.taxonomy.tags is defined %}
+	    							{% for tag in blog.taxonomy.tags %}
+	       							 {{ tag }}{% if not loop.last %}, {% endif %}
+	   								 {% endfor %}
+								{% endif %}
+							</div>
+
 			                    <div class="blog-body">
 
 			                    	<p> {{ blog.body|length > 98 ? blog.body|slice(3, 98) ~ ' ...' : blog.body  }} </p>
@@ -96,7 +105,9 @@
 	</div>
 
 	<div class="blog-button">
-		<div class="blog-seeAll"> <a href="/blogs"><p>Bekijk alle blogs &nbsp;></p></a> </div>
+		<div class="read-more-button">
+			<a href="/blogs"><p>Bekijk alle blogs &nbsp;></p></a>
+		</div>
 	</div>
 
 	
@@ -104,7 +115,7 @@
 
 {% block sponsoren %}
 	<div class="sponsoren">
-		<h1> Sponsoren </h1>
+		<h1><span class="underline-this">Sponsoren</span></h1>
 		<div class="text-sponsoren">
 			<h3> WIRELAB </h3>
 			<p> DIGITAL CREATIVE </p>

@@ -4,7 +4,7 @@
 
 main:
     - label: Over ons
-      path: blogs
+      path: page/5
     - label: Mijn Brandstof
       path: page/2
     - label: Meer Brandstof
@@ -21,8 +21,9 @@ main:
       class: menuLogIn
 
 logo:
-     - label: logo
+     - label: test
        path: homepage 
+       class: menu-logo
 
 
 

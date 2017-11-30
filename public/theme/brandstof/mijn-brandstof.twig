@@ -1,0 +1,53 @@
+{% extends 'partials/_master.twig' %}
+
+{% block kosten %}
+	<div class="kosten clearfix">
+		<h1> HIER KOMT PLAATJES VAN KOSTEN!!!</h1>
+	</div>
+
+{% endblock kosten %}
+
+{% block main %}
+	<div class="mijnbrandstof clearfix">
+		
+		<div class="mijnbrandstof-image">
+			 <div class="image">
+                   <img src="{{ image(record.img_body) }}">
+             </div>
+		</div>
+
+		<div class="mijnbrandstof-text">
+		    <div class="record-title">
+		        <h1><span class="underline-this">{{ record.title }}</span></h1>
+		    </div>
+
+
+		    <div class="record-body">
+		      <p>  {{ record.body}} </p>
+		    </div>
+		</div>
+	</div>
+
+{% endblock main %}
+
+{% block mijnuploads %}
+	<div class="mijnuploads clearfix">
+		<h1><span class="underline-this">Mijn uploads</span></h1>
+		<div class="show-uploads clearfix">
+
+            {% setcontent uploads = 'mijnuploads' %}
+            		{% if uploads is defined %}
+               			 {% for upload in uploads %}
+                    		 <div class="uploads-preview">
+                           		 <div class="uploads-img">
+                                   <img src="{{ upload.image|thumbnail(400, 300) }}">
+                           		 </div>
+                           	</div>
+                		{% endfor %}
+                	{% endif %}
+
+        </div>
+   
+		
+	</div>
+{% endblock mijnuploads %}

@@ -1,5 +1,5 @@
 .read-more-button{
-	background-color: #FD6731;
+	background-color: rgb(249,84,84);
 	border-radius: 30px;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
@@ -16,37 +16,14 @@
 	font-size: 137.5%;
 }
 
-.blog-seeAll a{
-	text-align: center;
-	color: white;
-}
 
-.blog-seeAll p{
-	font-size: 137.5%;
-}
-
-.blog-button{
-  width: 100%;
-}
-
-.blog-seeAll{
-  width: 26%; 
-  margin-left: 37%;
-  margin-top: 49%;
-  background-color: #FD6731;
-  border-radius: 30px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  text-align: center;
-	margin-bottom: 4%; 
-}
-
-.button-header{
-
+.blog-button .read-more-button{
+  margin: 4% auto 4% auto; 
+  width: 20%;
 }
 
 .button-left{
-background-color: #FD6731;
+background-color: rgb(249,84,84);
 	border-radius: 30px;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
@@ -92,7 +69,7 @@ background-color: #FD6731;
 }
 
 .button-right{
-background-color: #FD6731;
+background-color: rgb(249,84,84);
 	border-radius: 30px;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
@@ -153,19 +130,34 @@ background-color: #FD6731;
   }
 
   .headerphoto {
-  height: 30vh;
+  height: 300px;
   }
 
 }
 
+  @media screen and (max-width: 805px) {
+    .button-right{
+      width: 25%;
+      
+    }
 
-@media screen and (max-width: 801px) {
-.read-more-button{
-   margin-left: 35%;
+    .button-left{
+      width: 25%;
+      margin-left:25%;
+    }
   }
+
+
+@media screen and (max-width: 801px) and (min-width: 550px)  {
+
+
+.blog-button .read-more-button{
+  width: 35%;
+}
 
  .read-more-button{
     width: 35%;
+    margin-left: 35%;
   }
 
  .read-more-button p{
@@ -179,11 +171,28 @@ background-color: #FD6731;
   }
 }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 575px) {
+  .button-right{
+    width: 40%;
+    margin-left: 30%;
+  }
+
+  .button-left{
+    width: 40%;
+    margin-left: 30%;
+  }
+}
+
+@media screen and (max-width: 549.9px) {
 	.read-more-button{
 		width: 50%;
 		margin-left: 25%;
 	}
+
+   .blog-button .read-more-button{
+    width: 70%
+    
+  }
 
 	.blog-seeAll{
     	margin-top: 424%;
@@ -198,3 +207,5 @@ background-color: #FD6731;
     	margin-top: 500%;
   }
 }
+
+

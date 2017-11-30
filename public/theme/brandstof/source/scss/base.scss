@@ -25,6 +25,11 @@ body{
 
 
 
+.underline-this {
+        text-decoration: underline;
+        text-decoration-color: rgb(249,84,84);
+      }
+
 h1 a, h2 a, h3 a {
   text-decoration: none; 
 }
@@ -109,3 +114,4 @@ p{
 .footer{
   background-color: #C5B7A1;
 }
+

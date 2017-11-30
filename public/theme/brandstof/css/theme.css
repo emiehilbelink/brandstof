@@ -11,6 +11,11 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
+.underline-this {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #f95454;
+          text-decoration-color: #f95454; }
+
 h1 a, h2 a, h3 a {
   text-decoration: none; }
 
@@ -71,7 +76,8 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 60vh; }
+  height: 400px;
+  margin-bottom: 1.5%; }
 
 .headertitle {
   text-align: center; }
@@ -107,8 +113,15 @@ ul.pagination {
   border-right: 1px solid red;
   color: red !important; }
 
+#example-menu {
+  background-color: #C5B7A1;
+  height: 70px;
+  padding-top: 1%; }
+
 .top-bar-left {
-  margin-left: 8%; }
+  margin-left: 2%;
+  background-image: url(/files/brandstof-logo-menu.png);
+  width: 17.3% !important; }
 
 .top-bar-right {
   margin-right: 8%; }
@@ -117,23 +130,36 @@ ul.pagination {
   display: none; }
 
 .logo-header img {
-  width: 5%;
-  margin-top: 5%; }
+  margin-top: 5%;
+  content: "";
+  display: table;
+  clear: both; }
 
 .logo-header {
   text-align: center; }
+
+.logo-header p {
+  color: white; }
 
 .menu > li {
   padding: 0; }
 
 .menu > li a {
-  color: black;
+  color: white;
   text-decoration: none; }
 
 .menu > li.active > a {
   color: black;
   background-color: inherit;
   border-bottom: 1px solid; }
+
+@media screen and (max-width: 39.9375em) {
+  .logo-header img {
+    margin-left: 15%; } }
+
+@media screen and (max-width: 39.9375em) {
+  .logo-header img {
+    width: 70%; } }
 
 .timer {
   text-align: center;
@@ -157,7 +183,7 @@ ul.pagination {
   margin-top: 1.5em; }
 
 .homepage-left img {
-  width: 100%;
+  width: 60%;
   margin: auto; }
 
 .homepage-right {
@@ -168,13 +194,16 @@ ul.pagination {
 .homepage-text {
   width: 95%; }
 
+.homepage-text h1 {
+  margin-top: 15%; }
+
 .trending {
   height: 400px;
   background-color: #f5f1eb; }
 
 .trending h1 {
   text-align: center;
-  color: #d7c7af;
+  color: #C5B7A1;
   padding-top: 3%; }
 
 .blogs {
@@ -182,8 +211,14 @@ ul.pagination {
 
 .blogs h1 {
   text-align: center;
-  color: #d7c7af;
+  color: #C5B7A1;
   padding-top: 3%; }
+
+.taxonomy {
+  margin: 0 auto 1rem;
+  max-width: 73%;
+  display: block;
+  color: #f95454; }
 
 .blog-preview {
   width: 30%;
@@ -225,15 +260,22 @@ ul.pagination {
 
 .sponsoren {
   height: 300px;
-  background-color: #f5f1eb; }
+  background-image: url(/files/BG_Sponsoren.png); }
 
 .sponsoren h1 {
   text-align: center;
   color: #d7c7af;
   padding-top: 3%; }
 
-.text-sponsoren h3, p {
+.text-sponsoren h3 {
   text-align: center; }
+
+.text-sponsoren h3 {
+  color: white; }
+
+.text-sponsoren p {
+  text-align: center;
+  color: white; }
 
 @media screen and (max-width: 981px) {
   .homepage-text h1 {
@@ -268,7 +310,7 @@ ul.pagination {
     height: 200px; } }
 
 .read-more-button {
-  background-color: #FD6731;
+  background-color: #f95454;
   border-radius: 30px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -283,29 +325,12 @@ ul.pagination {
 .read-more-button p {
   font-size: 137.5%; }
 
-.blog-seeAll a {
-  text-align: center;
-  color: white; }
-
-.blog-seeAll p {
-  font-size: 137.5%; }
-
-.blog-button {
-  width: 100%; }
-
-.blog-seeAll {
-  width: 26%;
-  margin-left: 37%;
-  margin-top: 49%;
-  background-color: #FD6731;
-  border-radius: 30px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  text-align: center;
-  margin-bottom: 4%; }
+.blog-button .read-more-button {
+  margin: 4% auto 4% auto;
+  width: 20%; }
 
 .button-left {
-  background-color: #FD6731;
+  background-color: #f95454;
   border-radius: 30px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -345,7 +370,7 @@ ul.pagination {
   right: 0; }
 
 .button-right {
-  background-color: #FD6731;
+  background-color: #f95454;
   border-radius: 30px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -392,13 +417,21 @@ ul.pagination {
   .blog-seeAll {
     margin-top: 76%; }
   .headerphoto {
-    height: 30vh; } }
+    height: 300px; } }
 
-@media screen and (max-width: 801px) {
-  .read-more-button {
-    margin-left: 35%; }
-  .read-more-button {
+@media screen and (max-width: 805px) {
+  .button-right {
+    width: 25%; }
+  .button-left {
+    width: 25%;
+    margin-left: 25%; } }
+
+@media screen and (max-width: 801px) and (min-width: 550px) {
+  .blog-button .read-more-button {
     width: 35%; }
+  .read-more-button {
+    width: 35%;
+    margin-left: 35%; }
   .read-more-button p {
     font-size: 137.5%; }
   .blog-seeAll {
@@ -406,10 +439,20 @@ ul.pagination {
     width: 40%;
     margin-left: 30%; } }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 575px) {
+  .button-right {
+    width: 40%;
+    margin-left: 30%; }
+  .button-left {
+    width: 40%;
+    margin-left: 30%; } }
+
+@media screen and (max-width: 549.9px) {
   .read-more-button {
     width: 50%;
     margin-left: 25%; }
+  .blog-button .read-more-button {
+    width: 70%; }
   .blog-seeAll {
     margin-top: 424%;
     width: 70%;
@@ -418,3 +461,83 @@ ul.pagination {
 @media screen and (max-width: 321px) {
   .blog-seeAll {
     margin-top: 500%; } }
+
+.blog-preview {
+  margin-top: 5%; }
+
+.recent-blogs {
+  margin-bottom: 5%; }
+
+.single-blog {
+  padding-top: 5%;
+  padding-bottom: 5%; }
+
+.single-blog .record-title h1 {
+  text-align: center; }
+
+.single-blog .record-body {
+  width: 80%;
+  margin-left: 10%; }
+
+.about-us {
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%; }
+
+.about-us-text {
+  width: 50%;
+  float: left; }
+
+.about-us-text h1 {
+  text-align: center; }
+
+.about-us-text p {
+  margin-left: 10%;
+  width: 90%; }
+
+.about-us-image {
+  width: 50%;
+  float: left;
+  margin-top: 11%; }
+
+.about-us-image img {
+  opacity: 0.5; }
+
+.about-us-image img:hover {
+  opacity: 1; }
+
+.mijnbrandstof {
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #C5B7A1;
+  padding-top: 6%;
+  padding-bottom: 5%; }
+
+.mijnbrandstof-text {
+  width: 50%;
+  float: left; }
+
+.mijnbrandstof-text .record-body {
+  width: 70%; }
+
+.mijnbrandstof-image {
+  width: 50%;
+  float: left; }
+
+.mijnbrandstof-image img {
+  width: 60%; }
+
+.mijnbrandstof-image img:hover {
+  border-radius: 50%; }
+
+.mijnuploads {
+  margin-top: 1%;
+  margin-bottom: 5%; }
+
+.mijnuploads h1 {
+  text-align: center; }
+
+.uploads-preview {
+  width: 20%;
+  float: left; }

@@ -2,13 +2,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 60vh;
+  height: 400px;
+  margin-bottom: 1.5%;
 }
 
 .headertitle {
     text-align: center;
 }
-
 
 ul.pagination {
   background: #DDD;
@@ -49,8 +49,16 @@ ul.pagination {
   color: red !important;
 }
 
+#example-menu{
+  background-color: #C5B7A1;
+  height: 70px;
+  padding-top: 1%;
+}
+
 .top-bar-left{
-  margin-left: 8%;
+  margin-left: 2%;
+  background-image: url(/files/brandstof-logo-menu.png);
+  width: 17.3% !important;
 }
 
 .top-bar-right{
@@ -62,12 +70,18 @@ ul.pagination {
 }
 
 .logo-header img{
-  width: 5%;
   margin-top: 5%;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .logo-header{
   text-align: center;
+}
+
+.logo-header p{
+  color: white;
 }
 
 
@@ -77,10 +91,22 @@ ul.pagination {
 }
 
 .menu > li a {
-    color: black;
+    color: white;
     text-decoration: none; }
   .menu > li.active > a {
     color: black;
     background-color: inherit;
     border-bottom: 1px solid; 
+}
+
+@media screen and (max-width: 39.9375em) {
+  .logo-header img{
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .logo-header img{
+    width: 70%;
+  }
 }

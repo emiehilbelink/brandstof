@@ -44,17 +44,7 @@ $topbar-unstack-breakpoint: medium !default;
 
   padding: $topbar-padding;
 
-  &,
-  ul {
-    background-color: $topbar-background;
-  }
 
-  // Check if $topbar-background is differnt from $topbar-background-submenu
-  @if ($topbar-background != $topbar-submenu-background) {
-    ul ul {
-      background-color: $topbar-submenu-background;
-    }
-  }
 
   // Restrain width of inputs by default to make them easier to arrange
   input {
